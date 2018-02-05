@@ -56,6 +56,18 @@ public class Car extends Vehicle {
         this.ges = ges;
     }
 
+    public Scanner getInput() {
+        return input;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getGes() {
+        return ges;
+    }
+
     public void getCarInfo() {
         System.out.println("The current car is a " + getMake() + " " + getModel() + ". It is going " + getSpeed() + " MPH and has " + getGes() + "% of it's gas left.");
     }

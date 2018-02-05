@@ -12,7 +12,8 @@ public class Vehicle {
         this.model = model;
     }
 
-
+    public Vehicle() {
+    }
 
     public int getYear() {
         return year;
