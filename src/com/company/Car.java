@@ -96,6 +96,13 @@ public class Car extends Vehicle {
             car.setSpeed(car.getSpeed() - 1);
             car.setGes(car.getGes() - 1);
 
+            if (getSpeed() <= 0) {
+
+                car.setSpeed(car.getSpeed() - 5);
+                car.setGes(car.getGes() - 1);
+
+            }
+
             System.out.println("The " + car.getMake() + " " + car.getModel() + " is going " + car.getSpeed() + "MPH and has " + car.getGes() + "% of it's gas left.");
         }
         mainMenu.menu(car);

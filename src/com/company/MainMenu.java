@@ -13,7 +13,7 @@ public class MainMenu {
 //        car.getCarInfo();
 
         System.out.println("What kind of car would you like to create?");
-        System.out.println("1. Custom car \n2. Ready to go car \n3. Exit");
+        System.out.println("1. Custom car \n2. Classic car \n3. Exit");
 
         try {
             switch (input.nextInt()) {
