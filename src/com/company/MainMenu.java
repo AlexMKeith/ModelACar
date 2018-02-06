@@ -9,10 +9,36 @@ public class MainMenu {
 
     protected void createCar() {
 
-        Car car = new Car();
-        car.getCarInfo();
+//        Car car = new Car();
+//        car.getCarInfo();
 
-        menu(car);
+        System.out.println("What kind of car would you like to create?");
+        System.out.println("1. Custom car \n2. Ready to go car \n3. Exit");
+
+        try {
+            switch (input.nextInt()) {
+                case 1:
+                    Car car = new Car();
+                    car.getCarInfo();
+                    menu(car);
+                    break;
+                case 2:
+                    PremadeCar premadecar = new PremadeCar(1958, "Plymouth", "Fury", 0, 100, "Red");
+                    premadecar.getPremadeCarInfo();
+                    menu(premadecar);
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Please enter a number between 1 and 3.");
+                    createCar();
+            }
+        } catch (InputMismatchException ime) {
+            input.nextLine();
+            System.out.println("Please enter a number between 1 and 3.");
+            createCar();
+        }
 
     }
 
